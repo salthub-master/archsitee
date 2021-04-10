@@ -1,0 +1,619 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!--CSS-->
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+      integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/main.css" />
+    <link
+      href="https://fonts.googleapis.com/css?family=DM+Sans:400,500,700&display=swap"
+      rel="stylesheet"
+    />
+    <!--Title-->
+    <title>Arch</title>
+    <script>
+      var clicked = true;
+      var clicked2 = true;
+      var clicked3 = true;
+      var clicked4 = true;
+      var clicked5 = true;
+      function load() {
+        var style = document.createElement("style");
+        style.innerHTML = `
+        @keyframes cards {
+          from {bottom:-30px;}
+          to {bottom:0;}
+        }
+        @keyframes cards-opa {
+          from {opacity:0;}
+          to {opacity:1;}
+        }
+
+        @keyframes bimg {
+          from {margin-left:-30px;}
+          to {margin-left:0px;}
+        }
+        @keyframes bimg-opa {
+          from {opacity:0;}
+          to {opacity:1;}
+        }
+
+        @keyframes faqs {
+          from {margin-left:-50px;}
+          to {margin-left:0;}
+        }
+        @keyframes title {
+          from {margin-bottom:-50px;}
+          to {margin-bottom:0;}
+        }
+        @keyframes title-opa {
+          from {opacity:0;}
+          to {opacity:1;}
+        }
+        @keyframes faqs-opa {
+          from {opacity:0;}
+          to {opacity:1;}
+        }
+
+
+          .desc-container1{
+
+            visibility: hidden;
+          }
+          .desc-container2{
+
+            visibility: hidden;
+            }
+          .desc-container3{
+
+              visibility: hidden;
+              }
+          .desc-container4{
+
+            visibility: hidden;
+            }
+          .desc-container5{
+
+              visibility: hidden;
+              }
+
+          #faq{
+            bottom:-30px;
+            animation-name: faqs,faqs-opa;
+            animation-duration: 0.5s;
+            opacity:1;
+          }
+
+          #cards{
+            bottom:-30px;
+            opacity:0;
+
+            animation-name: cards-opa , cards;
+            animation-duration: 0.5s;
+            bottom:0;
+            opacity:1;
+
+
+          }
+
+          .background-image{
+            opacity:0;
+            animation-name: bimg-opa , bimg;
+            animation-duration: 0.5s;
+            opacity:1;
+          }
+
+          `;
+        document.head.appendChild(style);
+      }
+      function expand1() {
+        var style = document.createElement("style");
+        if (clicked) {
+          style.innerHTML = `
+          
+            .toggler1{
+              border:transparent;
+            }
+
+            .icon1{
+              transition: transform 0.3s;
+              transform: rotate(180deg);
+            }
+            .faq-card1{
+
+              transition: height 0.3s;
+              height:125px;
+            }
+            .desc-container1{
+              height: 0px;
+              transition: visibility,height 0.3s;
+              visibility: visible;
+              height:75px;
+            }
+          `;
+          clicked = false;
+        } else if (!clicked) {
+          style.innerHTML = `
+           .desc-container1{
+              height: 75px;
+              transition: visibility,height 0.3s;
+              height:0px;
+              visibility: hidden;
+            }
+            .toggler1{
+
+              border:transparent;
+
+              }
+            .icon1{
+              transition: transform 0.3s;
+              transform: rotate(-0deg);
+            }
+            
+            .faq-card1{
+
+ 
+              transition: height 0.3s;
+              height:50px;
+
+            }
+
+          `;
+          clicked = true;
+        }
+
+        document.head.appendChild(style);
+      }
+      function expand5() {
+        var style = document.createElement("style");
+        if (clicked5) {
+          style.innerHTML = `
+          
+            .toggler5{
+              border:transparent;
+            }
+
+            .icon5{
+              transition: transform 0.3s;
+              transform: rotate(180deg);
+            }
+            .faq-card5{
+
+              transition: height 0.3s;
+              height:125px;
+            }
+            .desc-container5{
+              height: 0px;
+              transition: visibility,height 0.3s;
+              visibility: visible;
+              height:40px;
+            }
+          `;
+          clicked5 = false;
+        } else if (!clicked5) {
+          style.innerHTML = `
+           .desc-container5{
+              height: 75px;
+              transition: visibility,height 0.3s;
+              height:0px;
+              visibility: hidden;
+            }
+            .toggler5{
+
+              border:transparent;
+
+              }
+            .icon5{
+              transition: transform 0.3s;
+              transform: rotate(-0deg);
+            }
+            
+            .faq-card5{
+
+ 
+              transition: height 0.3s;
+              height:50px;
+
+            }
+
+          `;
+          clicked5 = true;
+        }
+
+        document.head.appendChild(style);
+      }
+
+      function expand2() {
+        var style = document.createElement("style");
+        if (clicked2) {
+          style.innerHTML = `
+          
+            .toggler2{
+              border:transparent;
+            }
+
+            .icon2{
+              transition: transform 0.3s;
+              transform: rotate(180deg);
+            }
+            .faq-card2{
+
+              transition: height 0.3s;
+              height:125px;
+            }
+            .desc-container2{
+              height: 0px;
+              transition: visibility,height 0.3s;
+              visibility: visible;
+              height:75px;
+            }
+          `;
+          clicked2 = false;
+        } else if (!clicked2) {
+          style.innerHTML = `
+           .desc-container2{
+              height: 75px;
+              transition: visibility,height 0.3s;
+              height:0px;
+              visibility: hidden;
+            }
+            .toggler2{
+
+              border:transparent;
+
+              }
+            .icon2{
+              transition: transform 0.3s;
+              transform: rotate(-0deg);
+            }
+            
+            .faq-card2{
+
+ 
+              transition: height 0.3s;
+              height:50px;
+
+            }
+
+          `;
+          clicked2 = true;
+        }
+
+        document.head.appendChild(style);
+      }
+      function expand3() {
+        var style = document.createElement("style");
+        if (clicked3) {
+          style.innerHTML = `
+          
+            .toggler3{
+              border:transparent;
+            }
+
+            .icon3{
+              transition: transform 0.3s;
+              transform: rotate(180deg);
+            }
+            .faq-card3{
+
+              transition: height 0.3s;
+              height:125px;
+            }
+            .desc-container3{
+              height: 0px;
+              transition: visibility,height 0.3s;
+              visibility: visible;
+              height:75px;
+            }
+          `;
+          clicked3 = false;
+        } else if (!clicked3) {
+          style.innerHTML = `
+           .desc-container3{
+              height: 75px;
+              transition: visibility,height 0.3s;
+              height:0px;
+              visibility: hidden;
+            }
+            .toggler3{
+
+              border:transparent;
+
+              }
+            .icon3{
+              transition: transform 0.3s;
+              transform: rotate(-0deg);
+            }
+            
+            .faq-card3{
+
+ 
+              transition: height 0.3s;
+              height:50px;
+
+            }
+
+          `;
+          clicked3 = true;
+        }
+
+        document.head.appendChild(style);
+      }
+      function expand4() {
+        var style = document.createElement("style");
+        if (clicked4) {
+          style.innerHTML = `
+          
+            .toggler4{
+              border:transparent;
+            }
+
+            .icon4{
+              transition: transform 0.3s;
+              transform: rotate(180deg);
+            }
+            .faq-card4{
+
+              transition: height 0.3s;
+              height:125px;
+            }
+            .desc-container4{
+              height: 0px;
+              transition: visibility,height 0.3s;
+              visibility: visible;
+              height:75px;
+            }
+          `;
+          clicked4 = false;
+        } else if (!clicked4) {
+          style.innerHTML = `
+           .desc-container4{
+              height: 75px;
+              transition: visibility,height 0.3s;
+              height:0px;
+              visibility: hidden;
+            }
+            .toggler4{
+
+              border:transparent;
+
+              }
+            .icon4{
+              transition: transform 0.3s;
+              transform: rotate(-0deg);
+            }
+            
+            .faq-card4{
+
+ 
+              transition: height 0.3s;
+              height:50px;
+
+            }
+
+          `;
+          clicked4 = true;
+        }
+
+        document.head.appendChild(style);
+      }
+    </script>
+  </head>
+  <body onload="load();">
+    <!--Body-->
+    <!--Navbar-->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="#"> A R C H </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarText"
+          aria-controls="navbarText"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <img src="assets/menu.svg" alt="" />
+        </button>
+        <div class="collapse navbar-collapse" id="navbarText">
+          <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://arch-rocks.xyz/docs">Documentation</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="api.html">API</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="#">Exploit Download</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="https://discord.io/archrocks"
+                >Discord</a
+              >
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>`
+    <div class="background-image"></div>
+    <div class="infos">
+      <h1 class="title">
+        A R C H <br /><h> "Exploiting like never before."</h>
+        
+      </h1>
+
+      <div class="row justify-content-center">
+        <button id="arch-buttons" onclick="location.href = 'api.html'"> ArchAPI</button>
+        <button id="arch-buttons" onclick="location.href = 'https://cdn.discordapp.com/attachments/805146187811651637/827997451172315136/Arch.exe'">Boostraper</button>
+      </div>
+      <div class="row justify-content-center asad">
+        <div id="cards">
+          <img src="assets/top.png" alt="" />
+          <h1 class="card-title">Simplistic Design</h1>
+          <p class="desc">
+            Arch's Design is simple to use and many developers have liked it.
+          </p>
+        </div>
+        <div id="cards">
+          <img src="assets/top2.png" alt="" />
+          <h1 class="card-title">Overpowered DLL</h1>
+          <p class="desc" style="font-size: 1.1em">
+            Arch has a stable custom Bytecode Transpiler, Arch is both Stable,
+            and runs many popular scripts, like DarkHub etc.
+          </p>
+        </div>
+        <div id="cards">
+          <img src="assets/top3.png" alt="" />
+          <h1 class="card-title">Keyless!</h1>
+          <p class="desc">
+            With all of these packed feautures you would expect a big keysystem
+            in place, but its actually keyless, what is there not love?
+          </p>
+        </div>
+      </div>
+    </div>
+    <div class="row justify-content-center">
+      <div class="faq-card1" id="faq">
+        <div class="upper-card">
+          <button
+            class="toggler1"
+            type="button"
+            onclick="expand1()"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img class="icon1" src="assets/up.png" alt="" />
+          </button>
+          <h1 class="card-title1">Why does the Antivirus flag Arch?</h1>
+        </div>
+
+        <div class="desc-container1" id="desc-container">
+          <p class="desc1">
+            Arch is flagged on the Anti-Virus because it has the ability to
+            inject to ROBLOX like how a Virus can inject to a Program, and the
+            protections in place also alarm the Antivirus.
+          </p>
+        </div>
+      </div>
+
+      <div class="faq-card2" id="faq">
+        <div class="upper-card">
+          <button
+            class="toggler2"
+            type="button"
+            onclick="expand2()"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img class="icon2" src="assets/up.png" alt="" />
+          </button>
+          <h1 class="card-title2">Why is Arch Keyless?</h1>
+        </div>
+
+        <div class="desc-container2" id="desc-container">
+          <p class="desc2">
+            We dont get any profit, to deliver you the best exploiting
+            experiences : )
+          </p>
+        </div>
+      </div>
+      <div class="faq-card3" id="faq">
+        <div class="upper-card">
+          <button
+            class="toggler3"
+            type="button"
+            onclick="expand3()"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img class="icon3" src="assets/up.png" alt="" />
+          </button>
+          <h1 class="card-title3">Why is Arch Lagging?</h1>
+        </div>
+
+        <div class="desc-container3" id="desc-container">
+          <p class="desc3">
+            At the current moment we have a few issues, those will be fixed
+            soon!
+          </p>
+        </div>
+      </div>
+
+
+      <div class="faq-card5" id="faq">
+        <div class="upper-card">
+          <button
+            class="toggler5"
+            type="button"
+            onclick="expand5()"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <img class="icon5" src="assets/up.png" alt="" />
+          </button>
+          <h1 class="card-title5">
+            I found a bug/crash, who i can address this to?
+          </h1>
+        </div>
+
+        <div class="desc-container5" id="desc-container">
+          <p class="desc5">
+            If you find any issues while trying to use Arch, please contact
+            #support
+            <a href=" https://discord.io/archrocks">
+              https://discord.io/archrocks</a
+            >.
+          </p>
+        </div>
+      </div>
+    </div>
+
+    <footer class="footer-custom">
+      <div>
+        <a
+          class="policies"
+          href="https://raw.githubusercontent.com/salthub-master/arch/main/eula"
+          >EULA</a
+        >
+        <a
+          class="policies"
+          href="https://raw.githubusercontent.com/salthub-master/arch/main/pp"
+          >PRIVACY POLICY</a
+        >
+      </div>
+      <p>All rights served &nbsp;&nbsp; | &nbsp;&nbsp; A R C H® 2021</p>
+    </footer>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-JEW9xMcG8R+pH31jmWH6WWP0WintQrMb4s7ZOdauHnUtxwoG2vI5DkLtS3qm9Ekf"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
